@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.page {
+    margin: 0;
+    padding: 0;
+    background-color: $negro;
+    color: $blanco;
+    font-family: $primary-font;
+    position: relative;
+
+    .img-fondo-1 {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 0;
+
+        @include breakpoint(tablet) {
+            top: 110px;
+        }
+    }
+
+    .img-fondo-2 {
+        position: absolute;
+        top: 180px;
+        right: 0px;
+         z-index: 1;
+
+         @include breakpoint(desktop){
+            display: none;
+         }
+    }
+
+    .img-fondo-3 {
+        position: absolute;
+         top: 1130px;
+        right: 0;
+
+        @include breakpoint(tablet) {
+            top: 1050px;
+        }
+    }
+
+    .img-fondo-4 {
+        position: absolute;
+        bottom: 230px;
+        left: 0;
+
+
+        @include breakpoint(tablet) {
+            bottom: 180px;
+        }
+    }
+
+    .img-fondo-5 {
+        display: none;
+        @include breakpoint(desktop){
+            display: block;
+            position: absolute;
+            top: 500px;
+            right: 550px;
+            z-index: 1;
+        }
+    }
+
+
+
+
+}

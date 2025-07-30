@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+header {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include breakpoint(tablet){
+        margin-bottom: 90px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+         z-index: 1;
+
+         img {
+         @include breakpoint(tablet){
+            width: 25px;
+            height: 25px;
+         }
+
+         @include breakpoint(desktop) {
+             display: flex;
+            justify-content: space-between;
+            gap: 32px;
+         }
+        }
+
+    }
+
+    .logo {
+        width: 129px;
+        height: 32px;
+         z-index: 1;
+
+         img {
+         @include breakpoint(tablet) {
+             width: 172px;
+            height: 32px;
+         }
+         }
+    }
+
+
+    @include breakpoint(tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        z-index: 1;
+    }
+}
