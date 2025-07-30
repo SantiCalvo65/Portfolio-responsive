@@ -12,6 +12,11 @@
 // 3. Layout-related sections
 @use 'layout/footer';
 @use 'layout/header';
+@use 'layout/container';
+@use 'layout/hero';
+@use 'layout/categories';
+@use 'layout/projects';
+@use 'layout/contact';
 
 // 4. Components
 @use 'components/button';

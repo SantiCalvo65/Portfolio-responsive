@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.categories {
+    text-align: center;
+    border-top: 2px solid $blanco;
+    border-bottom: 2px solid $blanco;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: start;
+        border-bottom: none;
+        margin-bottom: 100px;
+        padding-bottom: 0;
+    }
+
+    @include breakpoint(desktop) {
+        gap: 30px;
+    }
+
+    span {
+        @include breakpoint(tablet) {
+            width: 345px;
+            height: 100px;
+            margin-bottom: 52px;
+        }
+
+         @include breakpoint(desktop) {
+          width: 345px;   
+        }
+    }
+
+    h3 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+
+        @include breakpoint(tablet){
+            font-size: 48px;
+            margin-bottom: 13px;
+        }
+
+       
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        margin-top: 0;
+
+        @include breakpoint(tablet){
+            font-size: 18px;
+        }
+    }
+}
